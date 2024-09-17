@@ -327,6 +327,13 @@
         }]
       });
     }
+    var popup_youtube = $('.video-init');
+    if (popup_youtube.is_exist()) {
+      popup_youtube.magnificPopup({
+        type: 'iframe',
+        mainClass: 'mfp-fade'
+      });
+    }
 
     /*--------------------------------------------------------------
     translo COUNTER JS INIT
