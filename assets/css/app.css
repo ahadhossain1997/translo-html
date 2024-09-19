@@ -2017,6 +2017,7 @@ a.translo-header-info {
   font-weight: 700;
   line-height: 26px;
   color: var(--dark-bg);
+  padding: 12px 0;
 }
 a.translo-header-info img {
   padding-right: 10px;
@@ -2412,28 +2413,12 @@ header.translo-header.main-header {
 .main-menu ul.sub-menu li a {
   font-size: 16px;
   line-height: 30px;
-  display: inline-block;
+  display: block;
   position: relative;
   font-weight: 400;
   color: var(--heading-color);
   text-transform: capitalize;
-  padding: 5px 80px 5px 20px;
-}
-.main-menu ul.sub-menu li a::before {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: auto;
-  right: 0;
-  height: 2px;
-  width: 0;
-  background-color: none;
-  transition: all 0.3s ease;
-}
-.main-menu ul.sub-menu li a:hover::before {
-  left: 0;
-  right: auto;
-  width: 100%;
+  padding: 5px 0 5px 20px;
 }
 .main-menu ul.sub-menu li.menu-item-has-children a.no-border {
   display: block;
@@ -2500,7 +2485,6 @@ ul.sub-menu li a {
 .menu-style1 > ul > li > a {
   padding: 22px 0;
 }
-
 .menu-left {
   margin-left: 35px;
 }
