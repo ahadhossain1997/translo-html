@@ -2,12 +2,12 @@
 
 
 // ScrollSmoother.create({
-//   content: ".translo-smooth-scroll",
+//   content: ".techin-smooth-scroll",
 //   smooth: 1
 // });
 
 // const body = document.body,
-//   jsScroll = document.getElementsByClassName("translo-smooth-scroll")[0],
+//   jsScroll = document.getElementsByClassName("techin-smooth-scroll")[0],
 //   height = jsScroll.getBoundingClientRect().height - 1,
 //   speed = 0.05;
 

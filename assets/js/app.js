@@ -6,22 +6,22 @@
   /*--------------------------------------------------------------
    [Table of contents]
   
-  translo PRELOADER JS INIT
-  translo HEADER SEARCH JS INIT
-  translo STICKY MENU JS INIT
-  translo MENU SIDEBAR JS INIT
-  translo SKILLBAR JS INIT
-  translo HERO SLIDER INIT
-  translo FOUR COLUMN SLIDER INIT
-  translo THREE COLUMN SLIDER INIT
-  translo FOUR COLUMN SLIDER TWO INIT
-  translo TWO COLUMN SLIDER INIT
-  translo ONE COLUMN SLIDER INIT
-  translo THREE COLUMN SLIDER TWO INIT
-  translo BRAND SLIDER INIT
-  translo COUNTER JS INIT
-  translo COUNTER JS TWO INIT
-  translo MAP JS
+  techin PRELOADER JS INIT
+  techin HEADER SEARCH JS INIT
+  techin STICKY MENU JS INIT
+  techin MENU SIDEBAR JS INIT
+  techin SKILLBAR JS INIT
+  techin HERO SLIDER INIT
+  techin FOUR COLUMN SLIDER INIT
+  techin THREE COLUMN SLIDER INIT
+  techin FOUR COLUMN SLIDER TWO INIT
+  techin TWO COLUMN SLIDER INIT
+  techin ONE COLUMN SLIDER INIT
+  techin THREE COLUMN SLIDER TWO INIT
+  techin BRAND SLIDER INIT
+  techin COUNTER JS INIT
+  techin COUNTER JS TWO INIT
+  techin MAP JS
    
   -------------------------------------------------------------------*/
 
@@ -34,19 +34,19 @@
   };
   $(function () {
     /*--------------------------------------------------------------
-    translo PRELOADER JS INIT
+    techin PRELOADER JS INIT
     --------------------------------------------------------------*/
-    $(".translo-preloader-wrap").fadeOut(500);
+    $(".techin-preloader-wrap").fadeOut(500);
 
     /*--------------------------------------------------------------
-    translo HEADER SEARCH JS INIT
+    techin HEADER SEARCH JS INIT
     ------------------------------------------------------------*/
-    $(".translo-header-search, .translo-header-search-close, .search-overlay").click(function () {
-      $(".translo-header-search-section, .search-overlay").toggleClass("open");
+    $(".techin-header-search, .techin-header-search-close, .search-overlay").click(function () {
+      $(".techin-header-search-section, .search-overlay").toggleClass("open");
     });
 
     /*--------------------------------------------------------------
-    translo STICKY MENU JS INIT
+    techin STICKY MENU JS INIT
     --------------------------------------------------------------*/
     $(window).on('scroll', function () {
       if ($(window).scrollTop() > 50) {
@@ -57,18 +57,18 @@
     });
 
     /*--------------------------------------------------------------
-    translo MENU SIDEBAR JS INIT
+    techin MENU SIDEBAR JS INIT
     --------------------------------------------------------------*/
-    $(".translo-header-barger").on("click", function (e) {
-      $(".translo-sidemenu-column, .offcanvas-overlay").addClass("active");
+    $(".techin-header-barger").on("click", function (e) {
+      $(".techin-sidemenu-column, .offcanvas-overlay").addClass("active");
       event.preventDefault(e);
     });
-    $(".translo-sidemenu-close, .offcanvas-overlay").on("click", function () {
-      $(".translo-sidemenu-column, .offcanvas-overlay").removeClass("active");
+    $(".techin-sidemenu-close, .offcanvas-overlay").on("click", function () {
+      $(".techin-sidemenu-column, .offcanvas-overlay").removeClass("active");
     });
 
     /*--------------------------------------------------------------
-    translo HERO SLIDER INIT
+    techin HERO SLIDER INIT
     --------------------------------------------------------------*/
     /*----------- Global Slider ----------*/
     $(".global-carousel").each(function () {
@@ -96,7 +96,7 @@
       $(slick.$slides).find('[data-ani]').removeClass('slider-animated');
       $(slick.$slides[currentSlide]).find('[data-ani]').addClass('slider-animated');
     });
-    var hero_slider = $('.translo-hero-slider');
+    var hero_slider = $('.techin-hero-slider');
     if (hero_slider.is_exist()) {
       hero_slider.slick({
         infinite: true,
@@ -107,15 +107,15 @@
         autoplay: false,
         speed: 800,
         lazyLoad: 'progressive',
-        prevArrow: '<button class="slide-arrow translo-hero-next"><i class="ri-arrow-left-s-line"></i></button>',
-        nextArrow: '<button class="slide-arrow translo-hero-prev"><i class="ri-arrow-right-s-line"></i></button>'
+        prevArrow: '<button class="slide-arrow techin-hero-next"><i class="ri-arrow-left-s-line"></i></button>',
+        nextArrow: '<button class="slide-arrow techin-hero-prev"><i class="ri-arrow-right-s-line"></i></button>'
       }).slickAnimation();
     }
 
     /*--------------------------------------------------------------
-    translo FOUR COLUMN SLIDER INIT
+    techin FOUR COLUMN SLIDER INIT
     --------------------------------------------------------------*/
-    var four_column_slider = $('.translo-4column-slider');
+    var four_column_slider = $('.techin-4column-slider');
     if (four_column_slider.is_exist()) {
       four_column_slider.slick({
         infinite: true,
@@ -167,9 +167,9 @@
     }
 
     /*--------------------------------------------------------------
-    translo THREE COLUMN SLIDER INIT
+    techin THREE COLUMN SLIDER INIT
     --------------------------------------------------------------*/
-    var three_column_slider = $('.translo-3column-slider');
+    var three_column_slider = $('.techin-3column-slider');
     if (three_column_slider.is_exist()) {
       three_column_slider.slick({
         infinite: true,
@@ -202,9 +202,9 @@
     }
 
     /*--------------------------------------------------------------
-    translo FOUR COLUMN SLIDER TWO INIT
+    techin FOUR COLUMN SLIDER TWO INIT
     --------------------------------------------------------------*/
-    var four_column_slider2 = $('.translo-4column-slider2');
+    var four_column_slider2 = $('.techin-4column-slider2');
     if (four_column_slider2.is_exist()) {
       four_column_slider2.slick({
         infinite: true,
@@ -233,9 +233,9 @@
     }
 
     /*--------------------------------------------------------------
-    translo TWO COLUMN SLIDER INIT
+    techin TWO COLUMN SLIDER INIT
     --------------------------------------------------------------*/
-    var two_column_slider = $('.translo-2column-slider');
+    var two_column_slider = $('.techin-2column-slider');
     if (two_column_slider.is_exist()) {
       two_column_slider.slick({
         infinite: true,
@@ -254,9 +254,9 @@
     }
 
     /*--------------------------------------------------------------
-    translo ONE COLUMN SLIDER INIT
+    techin ONE COLUMN SLIDER INIT
     --------------------------------------------------------------*/
-    var t_one_column_slider = $('.translo-1column-slider');
+    var t_one_column_slider = $('.techin-1column-slider');
     if (t_one_column_slider.is_exist()) {
       t_one_column_slider.slick({
         infinite: true,
@@ -266,15 +266,15 @@
         dots: false,
         autoplay: false,
         speed: 800,
-        prevArrow: '<button class="slide-arrow translo-t-next"><i class="ri-arrow-left-s-line"></i></button>',
-        nextArrow: '<button class="slide-arrow translo-t-prev"><i class="ri-arrow-right-s-line"></i></button>'
+        prevArrow: '<button class="slide-arrow techin-t-next"><i class="ri-arrow-left-s-line"></i></button>',
+        nextArrow: '<button class="slide-arrow techin-t-prev"><i class="ri-arrow-right-s-line"></i></button>'
       });
     }
 
     /*--------------------------------------------------------------
-    translo THREE COLUMN SLIDER TWO INIT
+    techin THREE COLUMN SLIDER TWO INIT
     --------------------------------------------------------------*/
-    var three_column_slider2 = $('.translo-3column-slider2');
+    var three_column_slider2 = $('.techin-3column-slider2');
     if (three_column_slider2.is_exist()) {
       three_column_slider2.slick({
         infinite: true,
@@ -298,11 +298,11 @@
     }
 
     /*--------------------------------------------------------------
-    translo BRAND SLIDER INIT
+    techin BRAND SLIDER INIT
     --------------------------------------------------------------*/
-    var translo_brand_slider = $('.translo-brand-slider');
-    if (translo_brand_slider.is_exist()) {
-      translo_brand_slider.slick({
+    var techin_brand_slider = $('.techin-brand-slider');
+    if (techin_brand_slider.is_exist()) {
+      techin_brand_slider.slick({
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -336,15 +336,15 @@
     }
 
     /*--------------------------------------------------------------
-    translo COUNTER JS INIT
+    techin COUNTER JS INIT
     --------------------------------------------------------------*/
-    var translo_counter = $('#translo-counter');
-    if (translo_counter.is_exist()) {
+    var techin_counter = $('#techin-counter');
+    if (techin_counter.is_exist()) {
       var a = 0;
       $(window).scroll(function () {
-        var oTop = $(translo_counter).offset().top - window.innerHeight;
+        var oTop = $(techin_counter).offset().top - window.innerHeight;
         if (a == 0 && $(window).scrollTop() > oTop) {
-          $('.translo-counter').each(function () {
+          $('.techin-counter').each(function () {
             var $this = $(this),
               countTo = $this.attr('data-percentage');
             $({
@@ -368,15 +368,15 @@
     }
 
     /*--------------------------------------------------------------
-    translo COUNTER JS TWO INIT
+    techin COUNTER JS TWO INIT
     --------------------------------------------------------------*/
-    var translo_counter2 = $('#translo-counter2');
-    if (translo_counter2.is_exist()) {
+    var techin_counter2 = $('#techin-counter2');
+    if (techin_counter2.is_exist()) {
       var a = 0;
       $(window).scroll(function () {
-        var oTop = $(translo_counter2).offset().top - window.innerHeight;
+        var oTop = $(techin_counter2).offset().top - window.innerHeight;
         if (a == 0 && $(window).scrollTop() > oTop) {
-          $('.translo-counter2').each(function () {
+          $('.techin-counter2').each(function () {
             var $this = $(this),
               countTo = $this.attr('data-percentage');
             $({
@@ -399,7 +399,7 @@
       });
     }
     /*--------------------------------------------------------------
-    translo AOS ANIMATION JS INIT
+    techin AOS ANIMATION JS INIT
     --------------------------------------------------------------*/
 
     AOS.init({
@@ -412,7 +412,7 @@
   $(window).on('load', function () {}); // End window LODE
 
   /*--------------------------------------------------------------
-  translo MAP JS
+  techin MAP JS
   ------------------------------------------------------------*/
   var google_map = $('#map');
   if (google_map.is_exist()) {
@@ -524,9 +524,9 @@
         position: new google.maps.LatLng(40.6700, -73.9400),
         map: map,
         // icon: 'assets/images/all-img/contact/map.png',
-        title: 'translo'
+        title: 'techin'
       });
-      var contentString = '<div id="content">' + '<div id="tpw">' + '<h3>translo' + '</div>';
+      var contentString = '<div id="content">' + '<div id="tpw">' + '<h3>techin' + '</div>';
       var infowindow = new google.maps.InfoWindow({
         content: contentString,
         maxWidth: 280

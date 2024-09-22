@@ -1,14 +1,14 @@
 /*---------- 03. Mobile Menu Active ----------*/
 $.fn.vsmobilemenu = function (options) {
     var opt = $.extend({
-        menuToggleBtn: ".translo-menu-toggle",
-        bodyToggleClass: "translo-body-visible",
-        subMenuClass: "translo-submenu",
-        subMenuParent: "translo-item-has-children",
-        subMenuParentToggle: "translo-active",
-        meanExpandClass: "translo-mean-expand",
-        appendElement: '<span class="translo-mean-expand"></span>',
-        subMenuToggleClass: "translo-open",
+        menuToggleBtn: ".techin-menu-toggle",
+        bodyToggleClass: "techin-body-visible",
+        subMenuClass: "techin-submenu",
+        subMenuParent: "techin-item-has-children",
+        subMenuParentToggle: "techin-active",
+        meanExpandClass: "techin-mean-expand",
+        appendElement: '<span class="techin-mean-expand"></span>',
+        subMenuToggleClass: "techin-open",
         toggleSpeed: 400,
       },
       options
@@ -84,4 +84,4 @@ $.fn.vsmobilemenu = function (options) {
     });
   };
 
-  $(".translo-menu-wrapper").vsmobilemenu();
+  $(".techin-menu-wrapper").vsmobilemenu();
