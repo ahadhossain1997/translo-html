@@ -399,6 +399,27 @@
       });
     }
 
+    // select dropdown js init
+    var index = 1;
+    var on = function on(listener, query, fn) {
+      document.querySelectorAll(query).forEach(function (item) {
+        item.addEventListener(listener, function (el) {
+          fn(el);
+        });
+      });
+    };
+    on('click', '.selectBtn', function (item) {
+      var next = item.target.nextElementSibling;
+      next.classList.toggle('toggle');
+      next.style.zIndex = index++;
+    });
+    on('click', '.option', function (item) {
+      item.target.parentElement.classList.remove('toggle');
+      var parent = item.target.closest('.select').children[0];
+      parent.setAttribute('data-type', item.target.getAttribute('data-type'));
+      parent.innerText = item.target.innerText;
+    });
+
     /*--------------------------------------------------------------
     techin current year JS INIT
     --------------------------------------------------------------*/
