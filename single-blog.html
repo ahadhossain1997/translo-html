@@ -11,9 +11,7 @@
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
   <!--- End favicon-->
 
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
   <!-- End google font  -->
 
@@ -23,6 +21,7 @@
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/remixicon.css">
   <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/niceselect.css">
 
 
   <!-- Code Editor  -->
@@ -341,11 +340,6 @@
                   </li>
                 </ul>
               </nav>
-              <!-- mobile menu trigger -->
-              <button class="techin-menu-toggle d-inline-block d-xl-none">
-                <span></span>
-              </button>
-              <!--/.Mobile Menu Hamburger Ends-->
             </nav>
             <div class="header-btn header-btn-l1 d-none d-xs-inline-flex">
               <div class="techin-header-icon">
@@ -358,8 +352,13 @@
                   </a>
                 </div>
               </div>
-              <a class="techin-default-btn  techin-header-btn" href="conact-us.html">Get A Quote</a>
+              <a class="techin-default-btn techin-header-btn" href="conact-us.html">Get A Quote</a>
             </div>
+            <!-- mobile menu trigger -->
+            <button class="techin-menu-toggle d-inline-block d-xl-none">
+              <span></span>
+            </button>
+            <!--/.Mobile Menu Hamburger Ends-->
           </div>
         </div>
       </div>
@@ -472,12 +471,12 @@
                 </blockquote>
                 <p class="blog-text">Automation is at the heart of a modern IT infrastructure. By automating routine and repetitive tasks, such as data backups, software updates, and network monitoring, businesses can free up valuable time for their employees to focus on more strategic initiatives. Automation tools integrated within IT systems can manage tasks like patch management, system diagnostics, and reporting, reducing the manual workload and minimizing human errors. This improved efficiency ultimately leads to higher productivity levels across teams and departments.</p>
                 <div class="row">
-                  <div class="col-lg-6">
+                  <div class="col-md-6">
                     <div class="blog-d-thumb2">
                       <img src="assets/images/blog/img14.png" alt="">
                     </div>
                   </div>
-                  <div class="col-lg-6">
+                  <div class="col-md-6">
                     <div class="blog-d-thumb2">
                       <img src="assets/images/blog/img15.png" alt="">
                     </div>
@@ -497,7 +496,7 @@
                     <h6>Share:</h6>
                     <ul>
                       <li>
-                        <a href="blog.html">
+                        <a href="https://www.behance.net/">
                           <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.25 5.4375C8.59375 5.8125 9.25 6.84375 9.25 8.21875C9.25 10.4688 7.375 11.4375 5.34375 11.4375H0V0.375H5.21875C7.09375 0.375 8.75 0.90625 8.75 3.125C8.75 4.21875 8.21875 4.9375 7.25 5.4375ZM2.40625 2.25V4.84375H4.875C5.75 4.84375 6.375 4.46875 6.375 3.53125C6.375 2.5 5.59375 2.25 4.71875 2.25H2.40625ZM5.03125 9.5625C6 9.5625 6.8125 9.21875 6.8125 8.09375C6.8125 6.96875 6.15625 6.5 5.0625 6.5H2.40625V9.5625H5.03125ZM16.2188 2.03125V0.9375H11.75V2.03125H16.2188ZM18 7.5625C18 7.6875 17.9688 7.84375 17.9688 7.96875H12.1875C12.1875 9.25 12.875 10 14.1562 10C14.8125 10 15.6875 9.65625 15.9062 8.96875H17.8438C17.25 10.7812 16 11.6562 14.0938 11.6562C11.5625 11.6562 9.96875 9.9375 9.96875 7.4375C9.96875 5.03125 11.625 3.1875 14.0938 3.1875C16.5938 3.1875 18 5.1875 18 7.5625ZM12.1875 6.5625H15.7812C15.6875 5.5 15.125 4.875 14 4.875C12.9688 4.875 12.25 5.53125 12.1875 6.5625Z" fill="#222627" />
                           </svg>
@@ -708,7 +707,7 @@
                 </div>
               </div>
             </div>
-            <div class="widget widget_categories widget-categories2">
+            <div class="widget widget_categories widget-categories">
               <h4 class="widget_title">Category</h4>
               <img src="assets/images/blog/line1.svg" alt="">
               <ul>
@@ -1079,6 +1078,7 @@
   <script src="assets/js/product-increment.js"></script>
   <script src="assets/js/top-to-bottom.js"></script>
   <script src="assets/js/aos.js"></script>
+  <script src="assets/js/niceselect.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArZVfNvjnLNwJZlLJKuOiWHZ6vtQzzb1Y"></script>
 
   <script src="assets/js/app.js"></script>
