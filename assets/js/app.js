@@ -367,6 +367,24 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         }
       });
     }
+    $(document).ready(function () {
+      $(".toggle-button").change(function () {
+        toggle(this.checked);
+      });
+
+      // Uncomment this to disaplay monthly on page load
+      toggle(false);
+      function toggle(checked) {
+        $(".toggle-button").prop('checked', checked);
+        if (checked) {
+          $('#coreMonthlyText,#coreMonthlyPrice,#proMonthlyText,#proMonthlyPrice').show();
+          $('#coreAnnuallyText,#coreAnnuallyPrice,#proAnnuallyText,#proAnnuallyPrice').hide();
+        } else {
+          $('#coreMonthlyText,#coreMonthlyPrice,#proMonthlyText,#proMonthlyPrice').hide();
+          $('#coreAnnuallyText,#coreAnnuallyPrice,#proAnnuallyText,#proAnnuallyPrice').show();
+        }
+      }
+    });
 
     /*--------------------------------------------------------------
     techin COUNTER JS TWO INIT
