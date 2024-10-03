@@ -101,36 +101,6 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       $(slick.$slides[currentSlide]).find('[data-ani]').addClass('slider-animated');
     });
 
-    // var hero_slider = $('.techin-hero-slider');
-    // if(hero_slider.is_exist()){
-    //   hero_slider.slick({
-    //   infinite: true,
-    //   slidesToShow: 1, 
-    //   slidesToScroll: 1,
-    //   arrows: true,
-    //   dots: false,
-    //   autoplay: false , 
-    //   speed: 800,
-    //   lazyLoad: 'progressive',
-    //   prevArrow: '<button class="slide-arrow techin-hero-next"><i class="ri-arrow-left-s-line"></i></button>',
-    // 	nextArrow: '<button class="slide-arrow techin-hero-prev"><i class="ri-arrow-right-s-line"></i></button>',
-    // }).slickAnimation();
-    // }
-
-    var hero_slider = $('.techin-hero-slider-init');
-    if (hero_slider.is_exist()) {
-      hero_slider.slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        arrows: false,
-        dots: true,
-        infinite: true,
-        speed: 1000,
-        lazyLoad: 'progressive'
-      }).slickAnimation();
-    }
-
     /*--------------------------------------------------------------
     techin FOUR COLUMN SLIDER INIT
     --------------------------------------------------------------*/
@@ -328,6 +298,10 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         arrows: true
       }, "slidesToScroll", 1), "infinite", true), "speed", 1000), "lazyLoad", 'progressive'), "prevArrow", '<button class="slide-arrow techin-brand-next"></button>'), "nextArrow", '<button class="slide-arrow techin-brand-prev"></button>')).slickAnimation();
     }
+
+    /*--------------------------------------------------------------
+    techin popup JS INIT
+    --------------------------------------------------------------*/
     var popup_youtube = $('.video-init');
     if (popup_youtube.is_exist()) {
       popup_youtube.magnificPopup({
@@ -366,6 +340,36 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
           a = 1;
         }
       });
+    }
+
+    // techin DATEPICKER JS INIT
+
+    jQuery(document).ready(function () {
+      jQuery('#datepicker').datepicker({
+        format: 'dd-mm-yyyy',
+        startDate: '+1d'
+      });
+    });
+    jQuery(document).ready(function () {
+      jQuery('#id_StartDate').datepicker({
+        dateFormat: 'yy/mm/dd',
+        startDate: '0d',
+        minDate: 0,
+        highlightWeek: true
+      });
+    });
+
+    /*--------------------------------------------------------------
+    techin BRAND SLIDER INIT
+    --------------------------------------------------------------*/
+    var p_slider = $('.techin-p-slider-wraper');
+    if (p_slider.is_exist()) {
+      p_slider.slick(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: true
+      }, "slidesToScroll", 1), "infinite", true), "speed", 1000), "lazyLoad", 'progressive'), "prevArrow", '<button class="slide-arrow techin-p-slider-next"></button>'), "nextArrow", '<button class="slide-arrow techin-p-slider-prev"></button>')).slickAnimation();
     }
     $(document).ready(function () {
       $(".toggle-button").change(function () {

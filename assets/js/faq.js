@@ -1,8 +1,9 @@
+//  start acc
 var Accordion = function(el, multiple) {
   this.el = el || {};
   this.multiple = multiple || false;
 
-  var links = this.el.find('.init-header');
+  var links = this.el.find('.techin-faq-header');
   links.on('click', {
       el: this.el,
       multiple: this.multiple
@@ -18,7 +19,7 @@ Accordion.prototype.dropdown = function(e) {
   $this.parent().toggleClass('open');
 
   if (!e.data.multiple) {
-      $el.find('.init-body').not($next).slideUp().parent().removeClass('open');
+      $el.find('.techin-faq-body').not($next).slideUp().parent().removeClass('open');
   };
 }
-var accordion = new Accordion($('.init-wrap'), false);
+var accordion = new Accordion($('.techin-faq-wrap1'), false);
