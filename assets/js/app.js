@@ -371,6 +371,19 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         arrows: true
       }, "slidesToScroll", 1), "infinite", true), "speed", 1000), "lazyLoad", 'progressive'), "prevArrow", '<button class="slide-arrow techin-p-slider-next"></button>'), "nextArrow", '<button class="slide-arrow techin-p-slider-prev"></button>')).slickAnimation();
     }
+
+    /*--------------------------------------------------------------
+    techin testimonial SLIDER INIT
+    --------------------------------------------------------------*/
+    var t_slider = $('.techin-t-slider-init');
+    if (t_slider.is_exist()) {
+      t_slider.slick(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: true
+      }, "slidesToScroll", 1), "infinite", true), "speed", 1000), "lazyLoad", 'progressive'), "prevArrow", '<button class="slide-arrow techin-t-slider-init-next"></button>'), "nextArrow", '<button class="slide-arrow techin-t-slider-init-prev"></button>')).slickAnimation();
+    }
     $(document).ready(function () {
       $(".toggle-button").change(function () {
         toggle(this.checked);
