@@ -362,14 +362,60 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     /*--------------------------------------------------------------
     techin BRAND SLIDER INIT
     --------------------------------------------------------------*/
-    var p_slider = $('.techin-p-slider-wraper');
+    var p_slider = $('.techin-three-column');
     if (p_slider.is_exist()) {
-      p_slider.slick(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
-        slidesToShow: 1,
+      p_slider.slick(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: false,
         arrows: true
-      }, "slidesToScroll", 1), "infinite", true), "speed", 1000), "lazyLoad", 'progressive'), "prevArrow", '<button class="slide-arrow techin-p-slider-next"></button>'), "nextArrow", '<button class="slide-arrow techin-p-slider-prev"></button>')).slickAnimation();
+      }, "slidesToScroll", 1), "infinite", true), "speed", 1000), "lazyLoad", 'progressive'), "prevArrow", '<button class="slide-arrow techin-p-slider-next"></button>'), "nextArrow", '<button class="slide-arrow techin-p-slider-prev"></button>'), "responsive", [{
+        breakpoint: 1399,
+        settings: {
+          slidesToShow: 2
+        }
+      }, {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          centerPadding: '70px'
+        }
+      }, {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '0px'
+        }
+      }])).slickAnimation();
+    }
+    /*--------------------------------------------------------------
+    techin BRAND SLIDER INIT
+    --------------------------------------------------------------*/
+    var s_slider = $('.techin-three-column2');
+    if (s_slider.is_exist()) {
+      s_slider.slick(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: true
+      }, "slidesToScroll", 1), "infinite", true), "speed", 1000), "lazyLoad", 'progressive'), "prevArrow", '<button class="slide-arrow techin-s-slider-next"></button>'), "nextArrow", '<button class="slide-arrow techin-s-slider-prev"></button>'), "responsive", [{
+        breakpoint: 1399,
+        settings: {
+          slidesToShow: 2
+        }
+      }, {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          centerPadding: '70px'
+        }
+      }, {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '0px'
+        }
+      }])).slickAnimation();
     }
 
     /*--------------------------------------------------------------

@@ -1921,6 +1921,12 @@ header.techin-header-section.techin-header-two.sticky-menu {
 
 .sticky-menu .header-logo2 {
   transition: all 0.4s;
+  border-right: 0 solid var(--accent-bg);
+}
+@media (max-width: 1399px) {
+  .sticky-menu .header-logo2 {
+    border-right: none;
+  }
 }
 @media (max-width: 1199px) {
   .sticky-menu .header-logo2 {
@@ -2011,6 +2017,7 @@ header.techin-header-section.techin-header-two.sticky-menu {
 
 .header-logo2 {
   padding: 0 80px 0 160px;
+  transition: all 0.4s;
   background: var(--heading-color);
   border-radius: 0 50px 50px 0;
   border-right: 40px solid var(--accent-bg);
@@ -2025,6 +2032,7 @@ header.techin-header-section.techin-header-two.sticky-menu {
 @media (max-width: 1399px) {
   .header-logo2 {
     padding: 1px 0 4px 110px;
+    border-right: none;
     border-right: none;
   }
 }
@@ -3657,8 +3665,8 @@ ul.sub-menu li a {
   right: 30px;
 }
 
-.techin-p-slider-wraper .techin-p-slider-next,
-.techin-p-slider-wraper .techin-p-slider-prev {
+.techin-three-column .techin-p-slider-next,
+.techin-three-column .techin-p-slider-prev {
   top: -130px;
   right: 80px;
   width: 60px;
@@ -3681,28 +3689,32 @@ ul.sub-menu li a {
   background-image: url(../images/v1/arrow.svg);
 }
 @media (max-width: 1199px) {
-  .techin-p-slider-wraper .techin-p-slider-next,
-  .techin-p-slider-wraper .techin-p-slider-prev {
+  .techin-three-column .techin-p-slider-next,
+  .techin-three-column .techin-p-slider-prev {
     top: -130px;
   }
 }
 @media (max-width: 991px) {
-  .techin-p-slider-wraper .techin-p-slider-next,
-  .techin-p-slider-wraper .techin-p-slider-prev {
+  .techin-three-column .techin-p-slider-next,
+  .techin-three-column .techin-p-slider-prev {
+    top: -80px;
+  }
+}
+@media (max-width: 767px) {
+  .techin-three-column .techin-p-slider-next,
+  .techin-three-column .techin-p-slider-prev {
     display: none !important;
   }
 }
 
-.techin-p-slider-wraper .techin-p-slider-prev {
+.techin-three-column .techin-p-slider-prev {
   left: auto;
   transform: rotate(180deg);
   right: 0;
   background-image: url(../images/v1/arrow.svg);
 }
-@media (max-width: 991px) {
-  .techin-p-slider-wraper .techin-p-slider-prev {
-    display: none !important;
-  }
+.techin-three-column .slick-slide {
+  margin: 0 12px;
 }
 
 .techin-faq-content-wrap {
@@ -4128,6 +4140,57 @@ ul.sub-menu li a {
   position: absolute;
   top: -20px;
   right: 20px;
+}
+.techin-team-wrap2 {
+  text-align: center;
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 1px solid var(--light-color2);
+  background-color: var(--light-color);
+}
+.techin-team-wrap2:hover .techin-team-social {
+  opacity: 1;
+}
+.techin-team-thumb2 {
+  padding: 0 35px 20px;
+}
+.techin-team-content2 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--light-color2);
+  margin-bottom: 20px;
+}
+.techin-team-content2 h5 {
+  padding-bottom: 10px;
+}
+.techin-team-content2 p {
+  width: 180px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 3px 20px;
+  border-radius: 20px;
+  margin: 0 auto;
+  color: var(--heading-color);
+  background-color: var(--light-color2);
+}
+.techin-team-info-wraper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.techin-team-info-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-bg);
+  gap: 10px;
+  border-radius: 6px;
+  padding: 10px 25px;
+}
+.techin-team-info-content h6 {
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--white-color);
 }
 
 .tag-share-social {
@@ -5709,6 +5772,119 @@ button#comment-btn:hover {
   font-size: 14px;
   line-height: 1.7em;
 }
+.techin-service-wraper2 {
+  margin-top: -315px;
+}
+.techin-service-wrap2 {
+  position: relative;
+  transition: all 0.4s;
+  border-radius: 20px;
+  padding: 20px 20px 40px 20px;
+  border: 1px solid var(--light-color2);
+  background-color: var(--light-color);
+}
+.techin-service-wrap2:hover {
+  border: 1px solid var(--accent-color);
+}
+.techin-service-wrap2:hover .techin-service-btn {
+  background-color: var(--accent-bg2);
+}
+.techin-service-wrap2:hover .techin-service-content2 h5 {
+  color: var(--accent-color);
+}
+@media (max-width: 991px) {
+  .techin-service-wrap2 {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .techin-service-wrap2 {
+    margin-bottom: 30px;
+  }
+}
+.techin-service-thumb {
+  position: relative;
+}
+.techin-service-thumb img {
+  border-radius: 20px;
+}
+.techin-service-icon2 {
+  padding: 0;
+  z-index: 2;
+  margin: 0 auto 20px;
+  border-radius: 100px;
+  position: absolute;
+  transition: all 0.4s;
+  display: flex;
+  border: 20px solid var(--light-color);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  bottom: -65px;
+  left: 34%;
+}
+.techin-service-content2 {
+  padding: 40px 20px 0 20px;
+  text-align: center;
+}
+.techin-service-content2 h5 {
+  padding-bottom: 10px;
+}
+.techin-service-content2 p {
+  margin-bottom: 24px;
+}
+
+.techin-three-column2 .techin-s-slider-next,
+.techin-three-column2 .techin-s-slider-prev {
+  top: -130px;
+  right: 80px;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  border: 1px solid var(--white-color);
+  display: flex;
+  cursor: pointer;
+  position: absolute;
+  transition: all 0.4s;
+  align-items: center;
+  border-radius: 100px;
+  background-size: 20px;
+  justify-content: center;
+  transform: translateY(-50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--white-bg);
+  transform: rotate(0deg);
+  background-image: url(../images/v1/arrow.svg);
+}
+@media (max-width: 1199px) {
+  .techin-three-column2 .techin-s-slider-next,
+  .techin-three-column2 .techin-s-slider-prev {
+    top: -130px;
+  }
+}
+@media (max-width: 991px) {
+  .techin-three-column2 .techin-s-slider-next,
+  .techin-three-column2 .techin-s-slider-prev {
+    top: -80px;
+  }
+}
+@media (max-width: 767px) {
+  .techin-three-column2 .techin-s-slider-next,
+  .techin-three-column2 .techin-s-slider-prev {
+    display: none !important;
+  }
+}
+
+.techin-three-column2 .techin-s-slider-prev {
+  left: auto;
+  transform: rotate(180deg);
+  right: 0;
+  background-image: url(../images/v1/arrow.svg);
+}
+.techin-three-column2 .slick-slide {
+  margin: 0 12px;
+}
 
 .techin-hero-section {
   overflow: hidden;
@@ -6766,6 +6942,9 @@ button#techin-subscription-btn {
 }
 .techin-section-title.version2 h2 {
   color: var(--white-color);
+}
+.techin-section-title.max-width-645 {
+  max-width: 645px;
 }
 
 .mb-50 {
