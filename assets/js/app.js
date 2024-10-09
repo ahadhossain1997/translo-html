@@ -291,14 +291,57 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     --------------------------------------------------------------*/
     var brand_slider = $('.techin-brand-slider');
     if (brand_slider.is_exist()) {
-      brand_slider.slick(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
-        slidesToShow: 1,
+      brand_slider.slick(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
+        slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: false,
         arrows: true
-      }, "slidesToScroll", 1), "infinite", true), "speed", 1000), "lazyLoad", 'progressive'), "prevArrow", '<button class="slide-arrow techin-brand-next"></button>'), "nextArrow", '<button class="slide-arrow techin-brand-prev"></button>')).slickAnimation();
+      }, "slidesToScroll", 1), "infinite", true), "speed", 500), "centerMode", true), "lazyLoad", 'progressive'), "prevArrow", '<button class="slide-arrow techin-brand-next"></button>'), "nextArrow", '<button class="slide-arrow techin-brand-prev"></button>'), "responsive", [{
+        breakpoint: 1399,
+        settings: {
+          slidesToShow: 4
+        }
+      }, {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3
+        }
+      }, {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2
+        }
+      }, {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1
+        }
+      }]));
     }
-
+    var brand_slider = $('.techin-brand-slider2');
+    if (brand_slider.is_exist()) {
+      brand_slider.slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 4000,
+        arrows: false,
+        pauseOnHover: false,
+        cssEase: 'linear',
+        responsive: [{
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 3
+          }
+        }, {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2
+          }
+        }]
+      });
+    }
     /*--------------------------------------------------------------
     techin popup JS INIT
     --------------------------------------------------------------*/
