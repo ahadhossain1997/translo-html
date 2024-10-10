@@ -458,7 +458,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
           slidesToShow: 1,
           centerPadding: '0px'
         }
-      }])).slickAnimation();
+      }]));
     }
 
     /*--------------------------------------------------------------
@@ -466,12 +466,29 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     --------------------------------------------------------------*/
     var t_slider = $('.techin-t-slider-init');
     if (t_slider.is_exist()) {
-      t_slider.slick(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
-        slidesToShow: 1,
+      t_slider.slick(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
+        slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: false,
         arrows: true
-      }, "slidesToScroll", 1), "infinite", true), "speed", 1000), "lazyLoad", 'progressive'), "prevArrow", '<button class="slide-arrow techin-t-slider-init-next"></button>'), "nextArrow", '<button class="slide-arrow techin-t-slider-init-prev"></button>')).slickAnimation();
+      }, "slidesToScroll", 1), "infinite", true), "speed", 1000), "lazyLoad", 'progressive'), "prevArrow", '<button class="slide-arrow techin-t-slider-init-next"></button>'), "nextArrow", '<button class="slide-arrow techin-t-slider-init-prev"></button>'), "responsive", [{
+        breakpoint: 1399,
+        settings: {
+          slidesToShow: 2
+        }
+      }, {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          centerPadding: '70px'
+        }
+      }, {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '0px'
+        }
+      }]));
     }
     $(document).ready(function () {
       $(".toggle-button").change(function () {
