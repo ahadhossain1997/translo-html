@@ -1,4 +1,3 @@
-//  start acc
 var Accordion = function(el, multiple) {
   this.el = el || {};
   this.multiple = multiple || false;
