@@ -1804,8 +1804,8 @@ blockquote {
   background-color: var(--accent-bg);
 }
 
-.bg-white {
-  background-color: var(--white-bg);
+.white-bg1 {
+  background-color: var(--white-bg) !important;
 }
 
 .z-index {
@@ -1836,7 +1836,7 @@ header.techin-header-section {
   width: 100%;
   top: 0;
   transition: all 0.4s;
-  background: var(--light-color);
+  background: var(--dark-color);
   padding: 15px 0;
 }
 header.techin-header-section.techin-header-one {
@@ -1862,11 +1862,17 @@ header.techin-header-section.techin-header-two {
 
 header.techin-header-section.sticky-menu {
   box-shadow: 0 4px 80px rgba(0, 0, 0, 0.1);
-  padding: 0;
+  padding: 30px 0 15px 0;
+}
+@media (max-width: 991px) {
+  header.techin-header-section.sticky-menu {
+    padding: 15px 0 15px 0;
+  }
 }
 
 header.techin-header-section.techin-header-one.sticky-menu {
   box-shadow: none !important;
+  padding: 40px 0 0 0;
 }
 @media (max-width: 1199px) {
   header.techin-header-section.techin-header-one.sticky-menu {
@@ -2063,15 +2069,15 @@ header.techin-header-section.techin-header-two.sticky-menu {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.light-color.site-menu-main .nav-link-item {
+.dark-color.site-menu-main .nav-link-item {
   color: var(--white-color);
 }
 
-.site-header .techin-menu-toggle.light-color span {
-  background-color: var(--white-color);
+.site-header .techin-menu-toggle.dark-color span {
+  background-color: var(--heading-color);
 }
-.site-header .techin-menu-toggle.light-color span::before, .site-header .techin-menu-toggle.light-color span::after {
-  background-color: var(--white-color);
+.site-header .techin-menu-toggle.dark-color span::before, .site-header .techin-menu-toggle.dark-color span::after {
+  background-color: var(--heading-color);
 }
 
 .header-bottom-border {
@@ -2149,7 +2155,7 @@ a.techin-header-info img {
   justify-content: center;
   background-color: #1E2656;
 }
-.techin-header-barger.light-color {
+.techin-header-barger.dark-color {
   background-color: rgba(255, 255, 255, 0.12);
 }
 @media (max-width: 767px) {
@@ -2397,7 +2403,7 @@ a.techin-header-info img {
 .main-menu a:hover {
   color: var(--accent-color2);
 }
-.main-menu.light-color a {
+.main-menu.dark-color a {
   color: var(--white-color);
 }
 .main-menu > ul > li {
@@ -2607,17 +2613,17 @@ ul.sub-menu li a {
   top: 9px;
 }
 
-.site-header .mobile-menu-trigger.light-color span {
+.site-header .mobile-menu-trigger.dark-color span {
   background-color: var(--white-color);
 }
 
-.site-header .mobile-menu-trigger.light-color span::after,
-.site-header .mobile-menu-trigger.light-color span::before {
+.site-header .mobile-menu-trigger.dark-color span::after,
+.site-header .mobile-menu-trigger.dark-color span::before {
   background-color: var(--white-color);
 }
 
-.site-header .mobile-menu-trigger.light-color span::after,
-.site-header .mobile-menu-trigger.light-color span::before {
+.site-header .mobile-menu-trigger.dark-color span::after,
+.site-header .mobile-menu-trigger.dark-color span::before {
   background-color: var(--white-color);
 }
 
@@ -3248,6 +3254,64 @@ ul.sub-menu li a {
     padding-bottom: 0;
   }
 }
+.techin-appointment-box-bg {
+  padding: 50px 50px 0;
+  position: absolute;
+  bottom: -120px;
+  left: 255px;
+  width: calc(100% - 510px);
+  border-radius: 20px 20px 0 0;
+  background-color: var(--white-bg);
+}
+@media (max-width: 1499px) {
+  .techin-appointment-box-bg {
+    left: 150px;
+    width: calc(100% - 300px);
+  }
+}
+@media (max-width: 1199px) {
+  .techin-appointment-box-bg {
+    left: 100px;
+    width: calc(100% - 200px);
+    padding: 40px 40px 0;
+  }
+}
+@media (max-width: 991px) {
+  .techin-appointment-box-bg {
+    left: 70px;
+    width: calc(100% - 140px);
+    padding: 40px 40px 0;
+    bottom: -150px;
+  }
+}
+@media (max-width: 767px) {
+  .techin-appointment-box-bg {
+    bottom: -235px;
+    left: 30px;
+    width: calc(100% - 60px);
+    padding: 20px 20px 0;
+  }
+}
+.techin-appointment-box3 {
+  border-radius: 20px;
+  background-color: #2F2BEB;
+  padding: 50px;
+}
+@media (max-width: 1199px) {
+  .techin-appointment-box3 {
+    padding: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .techin-appointment-box3 {
+    padding: 40px 40px 20px;
+  }
+}
+@media (max-width: 767px) {
+  .techin-appointment-box3 {
+    padding: 30px;
+  }
+}
 
 .mt-30 {
   margin-top: 30px;
@@ -3283,6 +3347,11 @@ ul.sub-menu li a {
 }
 .techin-main-field.field2 input {
   background-color: var(--white-bg) !important;
+}
+@media (max-width: 991px) {
+  .techin-main-field.field3 {
+    margin-bottom: 20px;
+  }
 }
 
 .mb-20 {
@@ -3379,6 +3448,30 @@ ul.sub-menu li a {
     width: 84%;
   }
 }
+.techin-popup-video4 img {
+  z-index: 1;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .techin-popup-video4 img {
+    width: 75% !important;
+  }
+}
+.techin-popup-video5 {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  left: -20px;
+}
+.techin-popup-video5 img {
+  z-index: 1;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .techin-popup-video5 img {
+    width: 75% !important;
+  }
+}
 
 .play-btn {
   position: absolute;
@@ -3445,6 +3538,24 @@ ul.sub-menu li a {
 @media (max-width: 991px) {
   .waves.waves3 {
     display: none;
+  }
+}
+.waves.waves4 {
+  left: -70px;
+  top: -70px;
+  z-index: 0;
+  background-color: var(--accent-bg);
+}
+@media (max-width: 991px) {
+  .waves.waves4 {
+    left: -44px;
+    top: -5px;
+  }
+}
+@media (max-width: 767px) {
+  .waves.waves4 {
+    left: -54px;
+    top: -15px;
   }
 }
 @media (max-width: 991px) {
@@ -6336,7 +6447,7 @@ button#comment-btn:hover {
   left: 34%;
 }
 .techin-service-content2 {
-  padding: 40px 20px 0 20px;
+  padding: 60px 20px 0 20px;
   text-align: center;
 }
 .techin-service-content2 h5 {
@@ -6344,6 +6455,63 @@ button#comment-btn:hover {
 }
 .techin-service-content2 p {
   margin-bottom: 24px;
+}
+.techin-service-wrap3 {
+  border: 1px solid #2F2BEB;
+  padding: 20px 20px 40px;
+  border-radius: 20px;
+  transition: all 0.4s;
+}
+.techin-service-wrap3:hover {
+  background-color: var(--accent-bg);
+}
+.techin-service-wrap3:hover .techin-service-icon3 {
+  background-color: var(--white-bg);
+}
+.techin-service-wrap3:hover .techin-service-btn2 {
+  background-color: var(--accent-bg2);
+}
+.techin-service-wrap3:hover .techin-service-content2 h5, .techin-service-wrap3:hover .techin-service-content2 p {
+  color: var(--white-color);
+}
+.techin-service-wrap3:hover .techin-service-icon-hide {
+  transform: translateY(0);
+}
+.techin-service-wrap3:hover .techin-service-icon-show {
+  transform: translateY(-65px);
+}
+.techin-service-icon3 {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  transition: all 0.4s;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  bottom: -35px;
+  overflow: hidden;
+  transform: translateX(-50%);
+  background-color: var(--accent-bg);
+}
+.techin-service-video-thumb {
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 120px 0 190px 100px;
+  position: relative;
+}
+.techin-service-video-thumb .video-play-btn {
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+}
+.techin-service-video-content {
+  max-width: 600px;
+}
+.techin-service-video-content h2 {
+  color: var(--white-color);
 }
 
 .techin-three-column2 .techin-s-slider-next,
@@ -6401,6 +6569,17 @@ button#comment-btn:hover {
   .techin-three-column2 .slick-slide {
     margin: 0;
   }
+}
+
+.techin-service-icon-hide,
+.techin-service-icon-show {
+  position: absolute;
+  transition: all 0.4s;
+  border-radius: 0 !important;
+}
+
+.techin-service-icon-hide {
+  transform: translateY(65px);
 }
 
 .techin-hero-section {
@@ -6503,6 +6682,7 @@ button#comment-btn:hover {
   padding: 5px 30px;
   border-radius: 6px;
   margin-bottom: 20px;
+  text-align: left;
   color: var(--white-color);
   font-family: "Ubuntu", sans-serif;
   background: linear-gradient(90deg, rgba(47, 43, 235, 0.4) 0%, #2F2BEB 100%);
@@ -6515,6 +6695,7 @@ button#comment-btn:hover {
 .techin-hero-tag.tag2 {
   width: 423px;
   margin: 0 auto 20px;
+  text-align: center;
   background: linear-gradient(90deg, rgba(43, 200, 235, 0.4) 0%, #2BC8EB 100%);
 }
 @media (max-width: 575px) {
@@ -6522,6 +6703,9 @@ button#comment-btn:hover {
     width: 300px;
     padding: 5px 28px;
   }
+}
+.techin-hero-tag.tag3 {
+  margin: 0 auto 20px;
 }
 .techin-hero-content2 {
   max-width: 645px;
@@ -6567,6 +6751,22 @@ button#comment-btn:hover {
 }
 .techin-hero-section-three {
   position: relative;
+  background-position: center;
+  background-size: cover;
+  margin: 0 60px;
+  margin-top: 160px;
+  border-radius: 20px;
+}
+@media (max-width: 1199px) {
+  .techin-hero-section-three {
+    margin-top: 90px;
+  }
+}
+@media (max-width: 767px) {
+  .techin-hero-section-three {
+    margin-top: 70px;
+    margin: 0 15px;
+  }
 }
 .techin-hero-section-three::before {
   position: absolute;
@@ -6575,6 +6775,7 @@ button#comment-btn:hover {
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 20px;
   background-color: rgba(2, 1, 53, 0.8);
 }
 .techin-hero-content3 {
@@ -6582,35 +6783,35 @@ button#comment-btn:hover {
   max-width: 645px;
   margin: 0 auto;
   text-align: center;
-  padding: 260px 0 0;
+  padding: 170px 0 350px;
 }
 @media (max-width: 1399px) {
   .techin-hero-content3 {
-    padding: 260px 0 0 0;
+    padding: 130px 0 300px;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .techin-hero-content3 {
-    padding: 220px 0 0px 0;
+    padding: 130px 0 250px;
   }
 }
 @media (max-width: 767px) {
   .techin-hero-content3 {
-    padding: 150px 0px 0;
+    padding: 130px 0 365px;
   }
 }
 .techin-hero-content3 h1 {
-  padding-bottom: 105px;
-}
-@media (max-width: 991px) {
-  .techin-hero-content3 h1 {
-    padding-bottom: 50px;
-  }
+  padding-bottom: 40px;
 }
 @media (max-width: 767px) {
   .techin-hero-content3 h1 {
     padding-bottom: 30px;
   }
+}
+.techin-hero-content3 p {
+  color: var(--white-smoke);
+  padding-bottom: 30px;
+  margin: 0;
 }
 
 .techin_screenfix_right2 {
@@ -6902,6 +7103,37 @@ button#comment-btn:hover {
   font-family: "Ubuntu", sans-serif;
   color: var(--white-color);
 }
+.techin-about-thumb-one img {
+  border-radius: 15px;
+}
+.techin-about-video-thumb {
+  position: relative;
+}
+.techin-about-video-thumb img {
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .techin-about-video-thumb img {
+    padding-top: 40px;
+  }
+}
+.techin-about-video-icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.techin-about-text {
+  padding-top: 40px;
+}
+
+.pl-50 {
+  padding-left: 50px;
+}
+@media (max-width: 991px) {
+  .pl-50 {
+    padding-left: 0;
+  }
+}
 
 .techin-title-tag {
   display: flex;
@@ -6918,6 +7150,9 @@ button#comment-btn:hover {
   color: var(--white-color);
 }
 .techin-title-tag.tag2 h6 {
+  color: var(--white-color);
+}
+.techin-title-tag.tag4 h6 {
   color: var(--white-color);
 }
 
@@ -7486,6 +7721,20 @@ button#techin-subscription-btn {
   }
 }
 
+.techin-section-padding10 {
+  padding: 240px 0 120px;
+}
+@media (max-width: 991px) {
+  .techin-section-padding10 {
+    padding: 240px 0 80px;
+  }
+}
+@media (max-width: 767px) {
+  .techin-section-padding10 {
+    padding: 280px 0 60px;
+  }
+}
+
 .techin-section-title {
   padding-bottom: 50px;
 }
@@ -7588,6 +7837,16 @@ button#techin-subscription-btn {
 #techin-submit-btn:hover {
   background-color: var(--heading-color);
 }
+.techin-default-btn.btn2,
+#techin-submit-btn.btn2 {
+  color: var(--heading-color) !important;
+  background-color: var(--accent-bg2);
+}
+.techin-default-btn.btn2:hover,
+#techin-submit-btn.btn2:hover {
+  color: var(--white-color) !important;
+  background-color: var(--heading-color);
+}
 .techin-default-btn.techin-cta-btn,
 #techin-submit-btn.techin-cta-btn {
   background-color: var(--accent-bg2);
@@ -7603,6 +7862,10 @@ button#techin-subscription-btn {
   color: var(--heading-color);
   background-color: var(--accent-bg2);
 }
+.techin-default-btn.techin-header-btn:hover,
+#techin-submit-btn.techin-header-btn:hover {
+  background-color: var(--heading-color);
+}
 @media (max-width: 767px) {
   .techin-default-btn.techin-header-btn,
   #techin-submit-btn.techin-header-btn {
@@ -7612,6 +7875,13 @@ button#techin-subscription-btn {
 .techin-default-btn.techin-service-btn,
 #techin-submit-btn.techin-service-btn {
   padding: 7px 32px;
+}
+.techin-default-btn.techin-service-btn2,
+#techin-submit-btn.techin-service-btn2 {
+  padding: 7px 32px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .techin-default-btn.btn-hover:hover,
 #techin-submit-btn.btn-hover:hover {
