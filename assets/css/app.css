@@ -3035,8 +3035,12 @@ ul.sub-menu li a {
   line-height: 26px;
   color: var(--white-color);
 }
-.techin-footer-info-text.info1 h5, .techin-footer-info-text.info1 span {
+.techin-footer-info-text.info1 h5 {
   color: var(--heading-color);
+}
+.techin-footer-info-text.info1 span {
+  color: var(--heading-color);
+  padding-bottom: 5px;
 }
 .techin-footer-bottom {
   padding: 30px 0;
@@ -3116,7 +3120,7 @@ ul.sub-menu li a {
 }
 @media (max-width: 767px) {
   .techin-footer-section3 {
-    padding: 40px 0 30px;
+    padding: 60px 0 30px;
     margin: 0 30px;
   }
 }
@@ -3169,16 +3173,15 @@ ul.sub-menu li a {
 .techin-instagram-thumb {
   position: relative;
   overflow: hidden;
+  border-radius: 5px;
 }
 .techin-instagram-thumb img {
   width: 100%;
   transition: all 0.4s;
   object-fit: cover;
-  border-radius: 5px;
 }
 .techin-instagram-thumb img:hover {
   transform: scale(1.1);
-  border-radius: 5px;
 }
 
 /*1.2 components css*/
@@ -3291,6 +3294,7 @@ ul.sub-menu li a {
   display: flex;
   align-items: center;
   gap: 50px;
+  position: relative;
 }
 @media (max-width: 767px) {
   .techin-skill-wraper {
@@ -3300,15 +3304,27 @@ ul.sub-menu li a {
 .techin-skill-wrap {
   width: 100%;
 }
+@media (max-width: 767px) {
+  .techin-skill-wrap {
+    padding-top: 30px;
+  }
+}
 .techin-skill-wrap h4 {
   margin-bottom: 20px;
 }
 .techin-skill-icon {
   flex-shrink: 0;
+  display: inline-block;
+  animation: animName 10s linear infinite;
+}
+.techin-skill-icon2 {
+  position: absolute;
+  left: 37px;
+  top: 37px;
 }
 @media (max-width: 767px) {
-  .techin-skill-icon {
-    padding-bottom: 30px;
+  .techin-skill-icon2 {
+    top: 38px;
   }
 }
 .techin-skill-item {
@@ -3337,6 +3353,9 @@ ul.sub-menu li a {
   animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
   margin-bottom: 20px;
   border: 1px solid var(--accent-bg);
+}
+.techin-skill-line:last-child {
+  margin-bottom: 0;
 }
 .techin-skill-line.line2 {
   background-color: var(--light-color);
@@ -3947,8 +3966,8 @@ ul.sub-menu li a {
   }
 }
 .waves.waves5 {
-  left: -40px;
-  top: -40px;
+  left: -44px;
+  top: -44px;
   background-color: var(--accent-bg2);
 }
 @media (max-width: 991px) {
@@ -4868,6 +4887,11 @@ ul.sub-menu li a {
   .techin-faq-wrap2 {
     padding-left: 0;
     padding-bottom: 40px !important;
+  }
+}
+@media (max-width: 991px) {
+  .techin-faq-wrap2 {
+    padding-bottom: 30px !important;
   }
 }
 .techin-faq-wrap2 h2 {
@@ -8930,6 +8954,11 @@ button#techin-subscription-btn {
 #techin-submit-btn.btn2:hover {
   color: var(--white-color) !important;
   background-color: var(--heading-color);
+}
+.techin-default-btn.btn3,
+#techin-submit-btn.btn3 {
+  width: 100%;
+  justify-content: center;
 }
 .techin-default-btn.techin-cta-btn,
 #techin-submit-btn.techin-cta-btn {
