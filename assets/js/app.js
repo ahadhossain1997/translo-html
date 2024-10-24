@@ -63,12 +63,48 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     /*--------------------------------------------------------------
     techin MENU SIDEBAR JS INIT
     --------------------------------------------------------------*/
-    $(".techin-header-barger").on("click", function (e) {
+    $(".techin-header-triger").on("click", function (e) {
       $(".techin-sidemenu-column, .offcanvas-overlay").addClass("active");
       event.preventDefault(e);
     });
     $(".techin-sidemenu-close, .offcanvas-overlay").on("click", function () {
       $(".techin-sidemenu-column, .offcanvas-overlay").removeClass("active");
+    });
+
+    /*--------------------------------------------------------------
+    techin Progree circle JS INIT
+    --------------------------------------------------------------*/
+
+    var progressPath = document.querySelector('.progress-wrap path');
+    var pathLength = progressPath.getTotalLength();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+    progressPath.style.strokeDashoffset = pathLength;
+    progressPath.getBoundingClientRect();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+    var updateProgress = function updateProgress() {
+      var scroll = $(window).scrollTop();
+      var height = $(document).height() - $(window).height();
+      var progress = pathLength - scroll * pathLength / height;
+      progressPath.style.strokeDashoffset = progress;
+    };
+    updateProgress();
+    $(window).scroll(updateProgress);
+    var offset = 50;
+    var duration = 550;
+    jQuery(window).on('scroll', function () {
+      if (jQuery(this).scrollTop() > offset) {
+        jQuery('.progress-wrap').addClass('active-progress');
+      } else {
+        jQuery('.progress-wrap').removeClass('active-progress');
+      }
+    });
+    jQuery('.progress-wrap').on('click', function (event) {
+      event.preventDefault();
+      jQuery('html, body').animate({
+        scrollTop: 0
+      }, duration);
+      return false;
     });
 
     /*--------------------------------------------------------------
@@ -100,191 +136,6 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       $(slick.$slides).find('[data-ani]').removeClass('slider-animated');
       $(slick.$slides[currentSlide]).find('[data-ani]').addClass('slider-animated');
     });
-
-    /*--------------------------------------------------------------
-    techin FOUR COLUMN SLIDER INIT
-    --------------------------------------------------------------*/
-    var four_column_slider = $('.techin-4column-slider');
-    if (four_column_slider.is_exist()) {
-      four_column_slider.slick({
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        autoplay: false,
-        centerMode: true,
-        centerPadding: '300px',
-        responsive: [{
-          breakpoint: 1600,
-          settings: {
-            slidesToShow: 3,
-            centerPadding: '250px'
-          }
-        }, {
-          breakpoint: 1399,
-          settings: {
-            slidesToShow: 3,
-            centerPadding: '150px'
-          }
-        }, {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 3,
-            centerPadding: '100px'
-          }
-        }, {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 2,
-            centerPadding: '100px'
-          }
-        }, {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            centerPadding: '100px'
-          }
-        }, {
-          breakpoint: 575,
-          settings: {
-            slidesToShow: 1,
-            centerPadding: '0px'
-          }
-        }]
-      });
-    }
-
-    /*--------------------------------------------------------------
-    techin THREE COLUMN SLIDER INIT
-    --------------------------------------------------------------*/
-    var three_column_slider = $('.techin-3column-slider');
-    if (three_column_slider.is_exist()) {
-      three_column_slider.slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        autoplay: false,
-        centerMode: true,
-        centerPadding: '100px',
-        responsive: [{
-          breakpoint: 1399,
-          settings: {
-            slidesToShow: 2
-          }
-        }, {
-          breakpoint: 850,
-          settings: {
-            slidesToShow: 1,
-            centerPadding: '70px'
-          }
-        }, {
-          breakpoint: 575,
-          settings: {
-            slidesToShow: 1,
-            centerPadding: '0px'
-          }
-        }]
-      });
-    }
-
-    /*--------------------------------------------------------------
-    techin FOUR COLUMN SLIDER TWO INIT
-    --------------------------------------------------------------*/
-    var four_column_slider2 = $('.techin-4column-slider2');
-    if (four_column_slider2.is_exist()) {
-      four_column_slider2.slick({
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        autoplay: false,
-        responsive: [{
-          breakpoint: 1399,
-          settings: {
-            slidesToShow: 3
-          }
-        }, {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 2
-          }
-        }, {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1
-          }
-        }]
-      });
-    }
-
-    /*--------------------------------------------------------------
-    techin TWO COLUMN SLIDER INIT
-    --------------------------------------------------------------*/
-    var two_column_slider = $('.techin-2column-slider');
-    if (two_column_slider.is_exist()) {
-      two_column_slider.slick({
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        autoplay: false,
-        responsive: [{
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 1
-          }
-        }]
-      });
-    }
-
-    /*--------------------------------------------------------------
-    techin ONE COLUMN SLIDER INIT
-    --------------------------------------------------------------*/
-    var t_one_column_slider = $('.techin-1column-slider');
-    if (t_one_column_slider.is_exist()) {
-      t_one_column_slider.slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: false,
-        autoplay: false,
-        speed: 800,
-        prevArrow: '<button class="slide-arrow techin-t-next"><i class="ri-arrow-left-s-line"></i></button>',
-        nextArrow: '<button class="slide-arrow techin-t-prev"><i class="ri-arrow-right-s-line"></i></button>'
-      });
-    }
-
-    /*--------------------------------------------------------------
-    techin THREE COLUMN SLIDER TWO INIT
-    --------------------------------------------------------------*/
-    var three_column_slider2 = $('.techin-3column-slider2');
-    if (three_column_slider2.is_exist()) {
-      three_column_slider2.slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        autoplay: false,
-        responsive: [{
-          breakpoint: 1299,
-          settings: {
-            slidesToShow: 2
-          }
-        }, {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1
-          }
-        }]
-      });
-    }
 
     /*--------------------------------------------------------------
     techin BRAND SLIDER INIT
@@ -353,6 +204,23 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         mainClass: 'mfp-fade'
       });
     }
+    var $titleTab = $('.title_tab');
+    $('.Accordion_item:eq(0)').find('.title_tab').addClass('active').next().stop().slideDown(300);
+    $titleTab.on('click', function (e) {
+      e.preventDefault();
+      if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+        $(this).next().stop().slideUp(500);
+        $(this).next().find('p').removeClass('show');
+      } else {
+        $(this).addClass('active');
+        $(this).next().stop().slideDown(500);
+        $(this).parent().siblings().children('.title_tab').removeClass('active');
+        $(this).parent().siblings().children('.inner_content').slideUp(500);
+        $(this).parent().siblings().children('.inner_content').find('p').removeClass('show');
+        $(this).next().find('p').addClass('show');
+      }
+    });
 
     /*--------------------------------------------------------------
     techin COUNTER JS INIT
